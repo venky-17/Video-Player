@@ -27,12 +27,15 @@ html {
     overflow: hidden;
   }
   
-
-  .player:fullscreen {
-    max-width: none;
-    width: 100%;
-  }
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
   
+}
   .player:-webkit-full-screen {
     max-width: none;
     width: 100%;
