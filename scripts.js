@@ -14,7 +14,7 @@ function togglePlay(){
     if(video.paused){
         video.play()
     }else{
-        video.pause()
+        video.pause();
     }
 }
 // function updateButton(){
