@@ -160,4 +160,11 @@ html {
     background: #ffc600;
     cursor: pointer;
   }
+  @media (max-width: 768px) {
+    .player {
+      transform: rotate(90deg);
+      transform-origin: center center;
+    }
+  }
+  
   
