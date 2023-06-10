@@ -77,12 +77,12 @@ fullScreenBtn.addEventListener('click', getFullScreen)
 player.addEventListener('dblclick',getFullScreen)
 player.addEventListener('dblclick', exitFullScreen)
 
-let mousedwon = false;
+let mousedown = false;
 
 progress.addEventListener('click', updateProgressBar)
 
-progress.addEventListener('mousemove',(e) => mousedwon && updateProgressBar(e) )
-progress.addEventListener('mousedown',() => mousedwon=true)
+progress.addEventListener('mousemove',(e) => mousedown && updateProgressBar(e) )
+progress.addEventListener('mousedown',() => mousedown=true)
 
 progress.addEventListener('mouseup',() => mousedwon=false) 
 
