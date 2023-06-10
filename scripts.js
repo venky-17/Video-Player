@@ -6,6 +6,8 @@ const progressBar = player.querySelector('.progress__filled')
 const toggle = player.querySelector(".toggle")
 const skipButtons = player.querySelectorAll('[data-skip]')
 const ranges = player.querySelectorAll('.player__slider')
+const replayBtn = document.querySelector('.replayBtn')
+const fullScreenBtn = document.querySelector('.fullScreen')
 
 
 function togglePlay(){
@@ -54,11 +56,26 @@ function updateProgressBar(e){
 
 }
 
+function replayVideo(){
+    video.currentTime = 0;
+}
+
+function getFullScreen(){
+    video.classList.add('fullscreen')
+}
+function exitFullScreen(){
+    video.classList.remove('fullscreen')
+}
+
 video.addEventListener('click', togglePlay)
 toggle.addEventListener('click', togglePlay)
 video.addEventListener('click', updateButton)
 toggle.addEventListener('click', updateButton)
 video.addEventListener('timeupdate', handleProgress)
+replayBtn.addEventListener('click', replayVideo)
+fullScreenBtn.addEventListener('click', getFullScreen)
+player.addEventListener('dblclick',getFullScreen)
+player.addEventListener('dblclick', exitFullScreen)
 
 let mousedwon = false;
 
