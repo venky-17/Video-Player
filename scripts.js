@@ -89,4 +89,4 @@ progress.addEventListener('click', updateProgressBar)
 progress.addEventListener('mousemove',(e) => mousedown && updateProgressBar(e) )
 progress.addEventListener('mousedown',() => mousedown=true)
 
-progress.addEventListener('mouseup',() => mousedwon=false) 
+progress.addEventListener('mouseup',() => mousedown=false) 
