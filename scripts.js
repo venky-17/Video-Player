@@ -77,6 +77,11 @@ fullScreenBtn.addEventListener('click', getFullScreen)
 player.addEventListener('dblclick',getFullScreen)
 player.addEventListener('dblclick', exitFullScreen)
 
+
+skipButtons.forEach(button => button.addEventListener('click', skip))
+ranges.forEach(range => range.addEventListener('change', handleRangeUpdate) )
+ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate) )
+
 let mousedown = false;
 
 progress.addEventListener('click', updateProgressBar)
@@ -85,10 +90,3 @@ progress.addEventListener('mousemove',(e) => mousedown && updateProgressBar(e) )
 progress.addEventListener('mousedown',() => mousedown=true)
 
 progress.addEventListener('mouseup',() => mousedwon=false) 
-
-
-
-
-skipButtons.forEach(button => button.addEventListener('click', skip))
-ranges.forEach(range => range.addEventListener('change', handleRangeUpdate) )
-//ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate) )
